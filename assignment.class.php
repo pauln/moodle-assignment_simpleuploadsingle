@@ -216,7 +216,7 @@ class assignment_simpleuploadsingle extends assignment_base {
             return true;
         }
 
-        if (has_capability('mod/assignment:submit', $this->context)
+        if (is_enrolled($this->context, $USER, 'mod/assignment:submit')
           and $this->isopen()                                      // assignment not closed yet
           and $this->assignment->resubmit                          // deleting allowed
           and $USER->id == $submission->userid                     // his/her own submission
