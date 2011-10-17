@@ -423,7 +423,7 @@ class assignment_simpleuploadsingle extends assignment_base {
             }
         }
 
-        //redirect($viewurl);
+        redirect($viewurl);
     }
 
     function upload_responsefile($mform) {
