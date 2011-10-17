@@ -1,0 +1,16 @@
+#page-mod-assignment-view div#simpleuploadbox .mform .fitem .fitemtitle {
+    display:block;
+    width:100%;
+    float:none;
+    text-align:left;
+}
+#page-mod-assignment-view div#simpleuploadbox .mform .fitem .felement {
+    margin-left:0;
+}
+#page-mod-assignment-view div#simpleuploadbox .mform .fitem .felement.fsubmit {
+    text-align:left;
+}
+#page-mod-assignment-view div#simpleuploadbox .mform .box {
+    text-align:right;
+    border:0px none;
+}
