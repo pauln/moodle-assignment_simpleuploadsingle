@@ -26,14 +26,18 @@ class mod_assignment_simpleuploadsinglesimple_form extends moodleform {
     function simpleupload_get_errors() {
         return $this->_form->_errors;
     }
+    function simpleupload_setMaxFileSize($newval) {
+        return $this->_form->setMaxFileSize($newval);
+    }
     function definition() {
         $mform = $this->_form;
         $instance = $this->_customdata;
+        $this->simpleupload_setMaxFileSize($instance['options']['maxbytes']);
 
         // visible elements
         //$mform->addElement('filemanager', 'newfile', get_string('uploadafile'));
         //$mform->addElement('filemanager', 'files_filemanager', get_string('uploadafile'), null, $instance['options']);
-        $mform->addElement('hidden', 'MAX_FILE_SIZE', $instance['options']['maxbytes']);
+        //$mform->addElement('hidden', 'MAX_FILE_SIZE', $instance['options']['maxbytes']);
         $mform->addElement('simplefile', 'assignment_file', $instance['caption']);
 
         // hidden params
